@@ -25,7 +25,7 @@ public class printSubsequence {
     public static ArrayList<String> getSubSeq(String str){
         if(str.length() == 0){
             ArrayList<String> bcs =  new ArrayList<>();
-            bcs.add("");
+            bcs.add("");   //to have a size of array list so that the loop1 and loop2 can be executed
             return bcs;
         }
 
@@ -35,10 +35,10 @@ public class printSubsequence {
         ArrayList<String> subs = getSubSeq(substr);
         
         ArrayList<String> finalSubs = new ArrayList<>();
-        for( String s : subs){
+        for( String s : subs){ //loop1
             finalSubs.add(ch + s);
         }
-        for( String s : subs){
+        for( String s : subs){  //loop2
             finalSubs.add(s);
         }
 
