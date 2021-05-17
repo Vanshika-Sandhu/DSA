@@ -5,6 +5,8 @@
 // Only four moves are allowed 't' (1-step up), 'l' (1-step left), 'd' (1-step down) 'r' (1-step right).
 // You can only move to cells which have 0 value in them. You can't move out of the boundaries or in the cells which have value 1 in them (1 means obstacle)
 
+// also a question of depth first search
+
 // input
 // 3 3
 // 0 0 0
