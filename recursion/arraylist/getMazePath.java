@@ -9,6 +9,8 @@
 // output
 // [hhvv, hvhv, hvvh, vhhv, vhvh, vvhh]
 
+package recursion.arraylist;
+
 import java.util.*;
 
 public class getMazePath {

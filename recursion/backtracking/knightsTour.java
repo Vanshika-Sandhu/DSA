@@ -29,6 +29,7 @@
 // 6 11 24 17 4 
 // 25 16 5 10 23  .... and many more
 
+package recursion.backtracking;
 
 import java.util.*;
 

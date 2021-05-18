@@ -20,6 +20,8 @@
 // feeaif
 // feesf
 
+package recursion.strings;
+
 import java.util.*;
 
 public class printEncoding {

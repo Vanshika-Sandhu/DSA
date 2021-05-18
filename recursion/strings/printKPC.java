@@ -23,6 +23,8 @@
 // uw
 // ux
 
+package recursion.strings;
+
 import java.util.*;
 
 public class printKPC {

@@ -9,6 +9,7 @@
 
 // output
 // [h1v1, v1h1, d1]
+package recursion.arraylist;
 
 import java.util.*;
 

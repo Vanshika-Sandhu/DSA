@@ -9,12 +9,13 @@
 // cab
 // cba
 
+package recursion.strings;
 
 import java.util.*;
 
 public class printPermutations {
 
-    public static void printPermutations(String str, String asf) {
+    public static void printpermutations(String str, String asf) {
         if(str.length() == 0){
             System.out.println(asf);
             return;
@@ -24,7 +25,7 @@ public class printPermutations {
             char ch = str.charAt(i);
             String subs1 = str.substring(0, i);
             String subs2 = str.substring(i+1);
-            printPermutations(subs1 + subs2, asf+ch);
+            printpermutations(subs1 + subs2, asf+ch);
         }
 
         return;
@@ -36,7 +37,7 @@ public class printPermutations {
         System.out.print("Enter a string : ");
         String str = scn.nextLine();
         
-        printPermutations(str, "");
+        printpermutations(str, "");
 
         scn.close();
     }    

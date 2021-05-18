@@ -9,6 +9,9 @@
 // output
 // hv
 // vh
+
+package recursion.strings;
+
 import java.util.*;
 
 public class printMazePath {
