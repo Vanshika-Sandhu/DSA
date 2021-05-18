@@ -1,4 +1,4 @@
-package recursion.introduction;
+package recursionLevel1.introduction;
 import java.util.*;
 
 public class power {

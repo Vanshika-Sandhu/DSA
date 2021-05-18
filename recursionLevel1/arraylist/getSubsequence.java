@@ -4,7 +4,7 @@
 // output
 // [, c, b, bc, a, ac, ab, abc]
 
-package recursion.arraylist;
+package recursionLevel1.arraylist;
 import java.util.*;
 
 public class getSubsequence {

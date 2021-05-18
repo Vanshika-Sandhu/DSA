@@ -23,7 +23,7 @@
 // uw
 // ux
 
-package recursion.strings;
+package recursionLevel1.strings;
 
 import java.util.*;
 

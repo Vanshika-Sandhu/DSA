@@ -10,7 +10,7 @@
 // 21
 // 3
 
-package recursion.strings;
+package recursionLevel1.strings;
 
 import java.util.*;
 

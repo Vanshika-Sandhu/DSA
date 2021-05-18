@@ -1,5 +1,5 @@
 // import java.io.*;
-package recursion.introduction;
+package recursionLevel1.introduction;
 import java.util.*;
 // import java.util.Scanner;
 

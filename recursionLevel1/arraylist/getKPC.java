@@ -16,7 +16,7 @@
 
 // output
 // [tv, tw, tx, uv, uw, ux]
-package recursion.arraylist;
+package recursionLevel1.arraylist;
 
 import java.util.*;
 

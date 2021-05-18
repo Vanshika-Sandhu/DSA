@@ -1,5 +1,5 @@
 // import java.util.*;
-package recursion.arrays;
+package recursionLevel1.arrays;
 
 public class indices {
 

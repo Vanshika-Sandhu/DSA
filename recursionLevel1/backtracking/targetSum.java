@@ -17,7 +17,7 @@
 // 10, 50, .
 // 20, 40, .
 
-package recursion.backtracking;
+package recursionLevel1.backtracking;
 
 
 import java.util.*;

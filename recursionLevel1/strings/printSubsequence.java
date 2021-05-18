@@ -18,7 +18,7 @@
 // T    => __T_
 // A    => ___A
 
-package recursion.strings;
+package recursionLevel1.strings;
 
 
 import java.util.*;

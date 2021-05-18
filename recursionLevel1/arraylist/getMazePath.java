@@ -9,7 +9,7 @@
 // output
 // [hhvv, hvhv, hvvh, vhhv, vhvh, vvhh]
 
-package recursion.arraylist;
+package recursionLevel1.arraylist;
 
 import java.util.*;
 

@@ -30,7 +30,7 @@
 // d1v1h1
 // d1d1
 // d2
-package recursion.strings;
+package recursionLevel1.strings;
 
 
 import java.util.*;

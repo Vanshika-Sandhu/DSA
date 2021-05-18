@@ -1,4 +1,4 @@
-package recursion.introduction;
+package recursionLevel1.introduction;
 
 public class test{
     public static void main(String[] args) {

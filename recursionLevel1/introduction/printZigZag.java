@@ -7,7 +7,7 @@
 
 // Input2 -> 3
 // Output3 -> 3 2 1 1 1 2 1 1 1 2 3 2 1 1 1 2 1 1 1 2 3
-package recursion.introduction;
+package recursionLevel1.introduction;
 
 import java.util.*;
 

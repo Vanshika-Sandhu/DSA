@@ -16,7 +16,7 @@
 // output
 // rddr
 
-package recursion.backtracking;
+package recursionLevel1.backtracking;
 
 import java.util.*;
 
