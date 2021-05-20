@@ -100,6 +100,7 @@ public class maxScore {
 		if (words == null || words.length == 0 || letters == null || letters.length == 0 || score == null
 				|| score.length == 0) {
 			System.out.println(0);
+			scn.close();
 			return;
 		}
 
