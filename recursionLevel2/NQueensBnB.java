@@ -22,11 +22,10 @@
 
 
 
-package recursionLevel2;
 
 import java.util.*;
 
-public class Main {
+public class NQueensBnB {
     
     public static void solve(boolean[][] board, boolean[] cols, boolean[] ndiag, boolean[] rdiag, int row, String asf ){
         // base case

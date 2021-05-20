@@ -14,12 +14,11 @@
 // 2p   => 110  => 20
 // 3    => 111  => 3
 
-package recursionLevel2;
 
 import java.util.*;
 
 
-public class abbrevation {
+public class abbreviation {
 
     public static void abrSolution(String str, String asf, int count, int pos) {
         // base case

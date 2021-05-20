@@ -28,7 +28,6 @@
 // 7 4 5 2 8 6 3 1 9 
 
 
-package recursionLevel2;
 import java.util.*;
 
 public class sudoku {
