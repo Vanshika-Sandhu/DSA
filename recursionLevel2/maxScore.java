@@ -23,6 +23,9 @@
 // Sample Output
 // 23
 
+package recursionLevel2;
+
+
 import java.util.*;
 
 public class maxScore {

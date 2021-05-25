@@ -14,6 +14,7 @@
 // 2p   => 110  => 20
 // 3    => 111  => 3
 
+package recursionLevel2;
 
 import java.util.*;
 

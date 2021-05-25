@@ -1,3 +1,5 @@
+package recursionLevel2;
+
 import java.util.*;
 
 public class friendsPairing {
