@@ -38,8 +38,17 @@ package timeAndSpace;
 import java.util.*;
 
 public class bubbleSort {
-    public static void bubbleSort(int[] arr) {
-        //write your code here
+    public static void bubbleSortAlgo(int[] arr) {
+        // the loop runs for n-1 iterations 
+        // outer loop to travel throughout the array
+        for(int i = 1; i<arr.length-1; i++){
+          // inner loop to compare each element with it's next one in every iteration in one complete outer loop
+          for(int j = 0; j<arr.length -1; j++){
+            if(isSmaller(arr, j+1, j)){   // compares the jth element from it's next element
+              swap(arr, j+1, j);          // if ismaller condition is true swaps both the elements
+            }
+          }
+        }
         
       }
     
@@ -70,12 +79,16 @@ public class bubbleSort {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
+        System.out.println("Enter no. of elements ");
         int n = scn.nextInt();
+        System.out.println("Enter the elements");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
-        bubbleSort(arr);
+        // call
+        bubbleSortAlgo(arr);
+        System.out.println("\nSorted array");
         print(arr);
 
         scn.close();
