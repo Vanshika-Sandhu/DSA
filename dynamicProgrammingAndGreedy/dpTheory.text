@@ -9,6 +9,6 @@ DYNAMIC PROGRAMMING
     -> when same problem is repeated with same values
 
 -> methods of dp
-    -> memoization
-    -> tabulation
+    -> memoization => uses recursion
+    -> tabulation  => uses iteration
     

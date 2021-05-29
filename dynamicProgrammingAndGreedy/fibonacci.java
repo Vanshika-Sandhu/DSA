@@ -12,7 +12,7 @@ import java.util.*;
 
 public class fibonacci {
 
-    // using dp
+    // using dp  => memoization method
     public static int fibonacciMemoization(int n, int[] qb) {
 
         if(n==0 || n==1){
