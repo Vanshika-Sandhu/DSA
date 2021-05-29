@@ -12,6 +12,7 @@ import java.util.*;
 
 public class fibonacci {
 
+    // using dp
     public static int fibonacciMemoization(int n, int[] qb) {
 
         if(n==0 || n==1){
@@ -27,6 +28,20 @@ public class fibonacci {
         qb[n] = f1 + f2;
         return qb[n];
     }
+
+    // without using dp
+    public static int fibonacciWoDP(int n) {
+
+        if(n==0 || n==1){
+            return n;
+        }
+        int f1 = fibonacciWoDP(n-1);
+        int f2 = fibonacciWoDP(n-2);
+        return f1+f2;
+    }
+
+
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
