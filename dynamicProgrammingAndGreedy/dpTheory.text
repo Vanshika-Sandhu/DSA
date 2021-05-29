@@ -1,0 +1,14 @@
+DYNAMIC PROGRAMMING
+
+-> used for time optimization
+
+-> used when the same problem is being repeated withing a given problem
+
+-> whether dp can be implemented on the codes, following are the checks
+    -> dp is implemented a code if it's solution comes in postfix order
+    -> when same problem is repeated with same values
+
+-> methods of dp
+    -> memoization
+    -> tabulation
+    
