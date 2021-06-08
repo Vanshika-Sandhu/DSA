@@ -13,8 +13,8 @@ DYNAMIC PROGRAMMING
     -> tabulation  => uses iteration
 
 -> for questions like permutation of coins and combinations of coins -> where repetition is allowed
-    -> take 1D array
-    
+    -> take 1D array 
+ 
 -> for target sum subset type of questions -> where repetition is not allowed
     -> take 2D array
     
