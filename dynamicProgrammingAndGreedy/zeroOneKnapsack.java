@@ -58,7 +58,7 @@ public class zeroOneKnapsack {
                         dp[i][j] = d2;
                     }
                 }
-            }
+            } 
         }
         
         System.out.println(dp[n][cap]);
