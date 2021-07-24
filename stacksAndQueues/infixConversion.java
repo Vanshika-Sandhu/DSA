@@ -35,6 +35,20 @@ public class infixConversion {
           return 0;
         }
       }
+
+      public static void process(Stack<Character> operators, Stack<String> pre, Stack<String> post){
+        Character op= operators.pop();
+            // v2 is upper in stack and v1 is lower
+            String prev2 = pre.pop();
+            String prev1 = pre.pop();
+            String prev = op + prev1 + prev2;
+            pre.push(prev);
+            
+            String postv2 = post.pop();
+            String postv1 = post.pop();
+            String postv = postv1 + postv2 + op;
+            post.push(postv);
+    }
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
@@ -59,56 +73,26 @@ public class infixConversion {
         }
         else if(ch == ')'){
             while(operators.peek()!='('){
-                Character op= operators.pop();
-                // v2 is upper in stack and v1 is lower
-                String prev2 = pre.pop();
-                String prev1 = pre.pop();
-                String prev = op + prev1 + prev2;
-                pre.push(prev);
-                
-                String postv2 = post.pop();
-                String postv1 = post.pop();
-                String postv = postv1 + postv2 + op;
-                post.push(postv);
+                process(operators, pre, post);
             }
             operators.pop();   // an extra for the opening bracket left
         }
         else if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
             while(operators.size()>0 && operators.peek()!='(' && precedence(ch)<=precedence(operators.peek())){
-                Character op= operators.pop();
-                // v2 is upper in stack and v1 is lower
-                String prev2 = pre.pop();
-                String prev1 = pre.pop();
-                String prev = op + prev1 + prev2;
-                pre.push(prev);
-                
-                String postv2 = post.pop();
-                String postv1 = post.pop();
-                String postv = postv1 + postv2 + op;
-                post.push(postv);
+                process(operators, pre, post);
             }
             operators.push(ch);
         }
     }
     
     while(operators.size()>0){
-        Character op= operators.pop();
-                // v2 is upper in stack and v1 is lower
-                String prev2 = pre.pop();
-                String prev1 = pre.pop();
-                String prev = op + prev1 + prev2;
-                pre.push(prev);
-                
-                String postv2 = post.pop();
-                String postv1 = post.pop();
-                String postv = postv1 + postv2 + op;
-                post.push(postv);
+        process(operators, pre, post);
     }
     
     System.out.println(post.peek());
     System.out.println(pre.peek());
 
-        scn.close();
+    scn.close();
     }
     
 }
