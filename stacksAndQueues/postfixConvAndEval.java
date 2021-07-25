@@ -15,7 +15,7 @@
 package stacksAndQueues;
 import java.util.*;
 
-public class prefixConvAndEval {
+public class postfixConvAndEval {
 
     public static int calc(int a, int b, char op){
         if(op=='+'){
