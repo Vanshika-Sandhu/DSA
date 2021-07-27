@@ -1,6 +1,6 @@
 // 1. You are required to complete the code of our QueueToStackAdapter class. 
-// 2. As data members you've two queues available - mainQ and helperQ. mainQ is to contain data and
-// helperQ is to assist in operations. (This is cryptic - take hint from video)
+// 2. As data members you've two queues available - mainQ and helperQ. mainQ is to contain data
+// and helperQ is to assist in operations. (This is cryptic - take hint from video)
 // 3. Here is the list of functions that you are supposed to complete
 //      3.1. push -> Should accept new data in LIFO manner.
 //      3.2. pop -> Should remove and return data in LIFO manner. If not available, print 
@@ -15,7 +15,7 @@
 package stacksAndQueues;
 import java.util.*;
 
-public class queueToStackAdapterPopEff {
+public class queueToStackAdapterPushEff {
 
     public static class QueueToStackAdapter {
         Queue<Integer> mainQ;
@@ -30,8 +30,16 @@ public class queueToStackAdapterPopEff {
           return mainQ.size();
         }
     
+        // push efficient
         void push(int val) {
+          while(mainQ.size()>0){
+              helperQ.add(mainQ.remove());
+          }
           mainQ.add(val);
+          while(helperQ.size()>0){
+              mainQ.add(helperQ.remove());
+          }
+          
         }
     
         int pop() {
@@ -39,14 +47,7 @@ public class queueToStackAdapterPopEff {
               System.out.println("Stack underflow");
               return -1;
           }else{
-              while(mainQ.size()>1){
-                  helperQ.add(mainQ.remove());
-              }
-              int x = mainQ.remove();
-              while(helperQ.size()>0){
-                  mainQ.add(helperQ.remove());
-              }
-              return x;
+              return mainQ.remove();
           }
         }
     
@@ -55,15 +56,7 @@ public class queueToStackAdapterPopEff {
               System.out.println("Stack underflow");
               return -1;
           }else{
-               while(mainQ.size()>1){
-                  helperQ.add(mainQ.remove());
-              }
-              int x = mainQ.remove();
-              helperQ.add(x);
-              while(helperQ.size()>0){
-                  mainQ.add(helperQ.remove());
-              }
-              return x;
+              return mainQ.peek();
           }
         }
       }
