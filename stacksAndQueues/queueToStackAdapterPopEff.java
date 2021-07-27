@@ -15,7 +15,7 @@
 package stacksAndQueues;
 import java.util.*;
 
-public class queueToStackAdapterPushEff {
+public class queueToStackAdapterPopEff {
 
     public static class QueueToStackAdapter {
         Queue<Integer> mainQ;
