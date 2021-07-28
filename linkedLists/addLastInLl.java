@@ -42,13 +42,13 @@ public class addLastInLl {
             if(size == 0){
               //   creating first node where head and tail are the same
                 head = tail = temp;
-                size++;
             }else{
               //   linking to the last node which is stored in tail
                 tail.next = temp;
                 tail = temp;
-                size++;
             }
+            
+            size++;
           }
     }
 
