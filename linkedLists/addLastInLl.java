@@ -35,19 +35,15 @@ public class addLastInLl {
         int size;
 
         void addLast(int val) {
+            
+            Node temp = new Node();
+            temp.data = val;
+            temp.next = null;
             if(size == 0){
-                Node temp = new Node();
-                temp.data = val;
-                temp.next = null;
-                
               //   creating first node where head and tail are the same
                 head = tail = temp;
                 size++;
             }else{
-                Node temp = new Node();
-                temp.data = val;
-                temp.next = null;
-                
               //   linking to the last node which is stored in tail
                 tail.next = temp;
                 tail = temp;
