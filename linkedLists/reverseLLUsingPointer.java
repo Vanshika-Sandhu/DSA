@@ -1,5 +1,5 @@
 // 1. You are given a partially written LinkedList class.
-// 2. You are required to complete the body of displayReverse and displayReverseHelper functions. The function are expected to print in reverse the linked list without actually reversing it. 
+// 2. You are required to complete the body of reversePR and reversePRHelper functions. The function are expected to print in reverse the linked list without actually reversing it. 
 // 3. Input and Output is managed for you. 
 
 // Note -> The online judge can't force you to write recursive function. But that is what the expectation is, the intention in to help you learn.
@@ -431,7 +431,7 @@ public class reverseLLUsingPointer {
         int b = scn.nextInt();
     
         l1.display();
-        l1.displayReverse();
+        l1.reversePR();
         l1.addLast(a);
         l1.addFirst(b);
         l1.display();
