@@ -119,12 +119,16 @@ public class genTreeTraversalPreAndPostOrder {
   }
 
   public static void traversals(Node node){
+    // eular's left => on the way deep in recursion | node's pre area
     System.out.println("Node Pre " + node.data);
     for(Node child : node.children){
+        // edge pre
         System.out.println("Edge Pre " + node.data + "--" + child.data);
         traversals(child);
+        // edge post
         System.out.println("Edge Post " + node.data + "--" + child.data );
     }
+    // eular's right => on the way out of recursion | node's post area
     System.out.println("Node Post " + node.data);
   }
 
