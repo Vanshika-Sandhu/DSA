@@ -56,18 +56,15 @@ public class sizeOfGenTree {
       }
     
       public static int size(Node node){
-
         // this can be ignored as the code stops at the leaf node automatically
         // if(node==null){
         //     return 0;
         // }
-        
         int ts = 0;
         for(Node child : node.children){
             ts = ts + size(child);
         }
-        
-        return ts+1;
+        return ts+1; // +1 for the parent node
     }
 
     public static void main(String[] args) {
