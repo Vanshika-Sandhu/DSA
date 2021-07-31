@@ -1,7 +1,17 @@
+// 1. You are given a partially written GenericTree class.
+// 2. You are required to complete the body of height function. The function is expected to find the height of tree. Depth of a node is defined as the number of edges it is away from the root (depth of root is 0). Height of a tree is defined as depth of deepest node.
+// 3. Input and Output is managed for you.
+
+// Sample Input
+// 12
+// 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
+// Sample Output
+// 2
+
 package genericTrees;
 import java.util.*;
 
-public class maxInGenTree {
+public class heightOfGenTree {
 
     private static class Node {
         int data;
@@ -57,19 +67,31 @@ public class maxInGenTree {
       }
     
       public static int max(Node node) {
-        // no need to write the base case as it is handled in loop for children
-        // if(node==null){
-        //     return Integer.MIN_VALUE;
-        // }
+        int m = Integer.MIN_VALUE;
+    
+        for (Node child : node.children) {
+          int cm = max(child);
+          m = Math.max(m, cm);
+        }
+        m = Math.max(m, node.data);
+    
+        return m;
+      }
+    
+      public static int height(Node node) {
+        // write your code here
         
-        int max = Integer.MIN_VALUE;
-        for(Node child: node.children){
-             int maxC = max(child);
-             max = Math.max(maxC, max);
+        // to consider edge height h = -1
+        // if you want to take the node height, take h = 0
+        int h = -1;
+        for(Node child : node.children){
+            int hc = height(child);
+            h = Math.max(h, hc);
         }
         
-        return Math.max(max, node.data);
+        return h + 1;
       }
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 
@@ -81,8 +103,8 @@ public class maxInGenTree {
         }
 
         Node root = construct(arr);
-        int max = max(root);
-        System.out.println(max);
+        int height = height(root);
+        System.out.println(height);
         // display(root);
 
         scn.close();
