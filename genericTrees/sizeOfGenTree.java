@@ -56,9 +56,11 @@ public class sizeOfGenTree {
       }
     
       public static int size(Node node){
-        if(node==null){
-            return 0;
-        }
+
+        // this can be ignored as the code stops at the leaf node automatically
+        // if(node==null){
+        //     return 0;
+        // }
         
         int ts = 0;
         for(Node child : node.children){
