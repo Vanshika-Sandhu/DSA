@@ -172,12 +172,12 @@ public class linearizeGenTree {
           return node;
       }
     
+      // approach 1
       public static void linearize(Node node){
         //   faith
         for(Node child : node.children){
             linearize(child);
         }
-        
         while(node.children.size()>1){
             Node lastChild = node.children.remove(node.children.size()-1);
             // this same index gives second last child as the last child is removed and now the second last child has become the last child
@@ -185,6 +185,26 @@ public class linearizeGenTree {
             Node secondLastChildTail = getTail(secondLastChild);
             secondLastChildTail.children.add(lastChild);
         }
+      }
+
+      // approach 2
+      public static Node linearize2(Node node){
+
+        if(node.children.size()==0){
+          return node;
+        }
+        //   faith
+        Node lastChildTail = linearize2(node.children.get(node.children.size()-1));
+        
+        while(node.children.size()>1){
+            Node lastChild = node.children.remove(node.children.size()-1);
+            // this same index gives second last child as the last child is removed and now the second last child has become the last child
+            Node secondLastChild = node.children.get(node.children.size()-1);
+            Node secondLastChildTail = linearize2(secondLastChild);
+            secondLastChildTail.children.add(lastChild);
+        }
+
+        return lastChildTail;
       }
     
 
