@@ -13,6 +13,7 @@
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class areMirrorinShape {
     private static class Node {
@@ -108,28 +109,29 @@ public class areMirrorinShape {
         return true;
       }
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int n1 = scn.nextInt();
-        int[] arr1 = new int[n1];
-        String[] values1 = scn.nextLine().split(" ");
-        for (int i = 0; i < n1; i++) {
-          arr1[i] = Integer.parseInt(values1[i]);
-        }
-        Node root1 = construct(arr1);
-    
-        int n2 = scn.nextInt();
-        int[] arr2 = new int[n2];
-        String[] values2 = scn.nextLine().split(" ");
-        for (int i = 0; i < n2; i++) {
-          arr2[i] = Integer.parseInt(values2[i]);
-        }
-        Node root2 = construct(arr2);
-    
-        boolean mirror = areMirror(root1, root2);
-        System.out.println(mirror);
-        scn.close();
+    int n1 = Integer.parseInt(br.readLine());
+    int[] arr1 = new int[n1];
+    String[] values1 = br.readLine().split(" ");
+    for (int i = 0; i < n1; i++) {
+      arr1[i] = Integer.parseInt(values1[i]);
+    }
+    Node root1 = construct(arr1);
+
+    int n2 = Integer.parseInt(br.readLine());
+    int[] arr2 = new int[n2];
+    String[] values2 = br.readLine().split(" ");
+    for (int i = 0; i < n2; i++) {
+      arr2[i] = Integer.parseInt(values2[i]);
+    }
+    Node root2 = construct(arr2);
+
+    boolean mirror = areMirror(root1, root2);
+    System.out.println(mirror);
+
+    br.close();
     }
     
 }
