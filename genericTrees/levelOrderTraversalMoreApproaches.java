@@ -1,5 +1,6 @@
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class levelOrderTraversalMoreApproaches {
 
@@ -197,22 +198,18 @@ public class levelOrderTraversalMoreApproaches {
         }
 
     }
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String str = scn.nextLine();
-        String[] values = str.split(" ");
-        for (int i = 0; i < n; i++) {
-          arr[i] = Integer.parseInt(values[i]);
-        }
+    public static void main(String[] args) throws Exception{
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
+        arr[i] = Integer.parseInt(values[i]);
+      }
     
         Node root = construct(arr);
         levelOrderLineWise2(root);
         levelOrderLineWise3(root);
-
-        scn.close();
     }
     
 }

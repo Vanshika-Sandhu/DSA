@@ -12,6 +12,7 @@
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class findInGenTree {
 
@@ -74,21 +75,21 @@ public class findInGenTree {
             return ans;
         }
       }
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
-        for (int i = 0; i < n; i++) {
-          arr[i] = Integer.parseInt(values[i]);
-        }
-    
-        int data = scn.nextInt();
-    
-        Node root = construct(arr);
-        boolean flag = find(root, data);
-        System.out.println(flag);
-        // display(root);
-        scn.close();
+    public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
+        arr[i] = Integer.parseInt(values[i]);
+      }
+  
+      int data = Integer.parseInt(br.readLine());
+  
+      Node root = construct(arr);
+      boolean flag = find(root, data);
+      System.out.println(flag);
+      // display(root);
+        // br.close();
     }
 }

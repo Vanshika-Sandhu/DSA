@@ -1,5 +1,6 @@
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class maxInGenTree {
 
@@ -70,22 +71,19 @@ public class maxInGenTree {
         
         return Math.max(max, node.data);
       }
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
-        for (int i = 0; i < n; i++) {
+    public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
         arr[i] = Integer.parseInt(values[i]);
-        }
-
-        Node root = construct(arr);
-        int max = max(root);
-        System.out.println(max);
-        // display(root);
-
-        scn.close();
+      }
+  
+      Node root = construct(arr);
+      int m = max(root);
+      System.out.println(m);
+      // display(root);
     }
     
 }

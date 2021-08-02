@@ -13,6 +13,7 @@
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class lowestCommonAncestorGenTree {
     private static class Node {
@@ -93,23 +94,22 @@ public class lowestCommonAncestorGenTree {
       }
     
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
-        for (int i = 0; i < n; i++) {
-          arr[i] = Integer.parseInt(values[i]);
-        }
-    
-        int d1 = scn.nextInt();
-        int d2 = scn.nextInt();
-    
-        Node root = construct(arr);
-        int lca = lca(root, d1, d2);
-        System.out.println(lca);
-        // display(root);
-        scn.close();
+    public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
+        arr[i] = Integer.parseInt(values[i]);
+      }
+  
+      int d1 = Integer.parseInt(br.readLine());
+      int d2 = Integer.parseInt(br.readLine());
+  
+      Node root = construct(arr);
+      int lca = lca(root, d1, d2);
+      System.out.println(lca);
+      // display(root);
     }
     
 }

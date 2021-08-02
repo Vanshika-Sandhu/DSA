@@ -13,7 +13,9 @@
 // 40 -> .
 
 package genericTrees;
+import java.io.*;
 import java.util.*;
+
 
 public class removeLeavesGenTree {
 
@@ -161,11 +163,11 @@ public class removeLeavesGenTree {
       }
     
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
         int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
+        String[] values = br.readLine().split(" ");
         for (int i = 0; i < n; i++) {
           arr[i] = Integer.parseInt(values[i]);
         }
@@ -173,7 +175,6 @@ public class removeLeavesGenTree {
         Node root = construct(arr);
         removeLeaves(root);
         display(root);
-        scn.close();
     }
     
 }

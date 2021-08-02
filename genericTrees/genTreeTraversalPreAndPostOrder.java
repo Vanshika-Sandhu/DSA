@@ -38,6 +38,7 @@
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class genTreeTraversalPreAndPostOrder {
 
@@ -132,18 +133,17 @@ public class genTreeTraversalPreAndPostOrder {
     System.out.println("Node Post " + node.data);
   }
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
-        for (int i = 0; i < n; i++) {
-          arr[i] = Integer.parseInt(values[i]);
-        }
-    
-        Node root = construct(arr);
-        traversals(root);
-        scn.close();
+    public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
+        arr[i] = Integer.parseInt(values[i]);
+      }
+  
+      Node root = construct(arr);
+      traversals(root);
         
     }
     

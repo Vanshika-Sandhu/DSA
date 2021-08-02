@@ -10,6 +10,7 @@
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class heightOfGenTree {
 
@@ -92,22 +93,20 @@ public class heightOfGenTree {
         return h + 1;
       }
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
-        for (int i = 0; i < n; i++) {
+    public static void main(String[] args) throws Exception{
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
         arr[i] = Integer.parseInt(values[i]);
-        }
+      }
+  
+      Node root = construct(arr);
+      int h = height(root);
+      System.out.println(h);
+      // display(root);
 
-        Node root = construct(arr);
-        int height = height(root);
-        System.out.println(height);
-        // display(root);
-
-        scn.close();
     }
     
 }

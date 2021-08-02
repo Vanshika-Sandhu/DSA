@@ -8,6 +8,7 @@
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class MultisolverGenTree {
     private static class Node {
@@ -69,11 +70,11 @@ public class MultisolverGenTree {
         System.out.println("Size : " + size + "\n" + "Min : " + min + "\n" + "Max : " + max + "\n" + "height :" + height);
 
       }
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
         int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
+        String[] values = br.readLine().split(" ");
         for (int i = 0; i < n; i++) {
         arr[i] = Integer.parseInt(values[i]);
         }
@@ -84,8 +85,6 @@ public class MultisolverGenTree {
         max = Integer.MIN_VALUE;
         height = 0;
         multisolver(root, 0);
-        // display(root);
-        scn.close();
     }
     
 }
