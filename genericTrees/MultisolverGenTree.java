@@ -6,6 +6,16 @@
 // min = Integer.MAX_VALUE;
 // height = 0;
 
+
+// Sample Input
+// 24
+// 10 20 50 -1 60 -1 -1 30 70 -1 80 110 -1 120 -1 -1 90 -1 -1 40 100 -1 -1 -1 
+// Sample output
+// Size : 12
+// Min : 10
+// Max : 120
+// height :3
+
 package genericTrees;
 import java.util.*;
 import java.io.*;
@@ -58,7 +68,7 @@ public class MultisolverGenTree {
       static int max;
       static int height;
       public static void multisolver(Node node, int depth){
-        size +=1;
+        size++;
         max = Math.max(max, node.data);
         min = Math.min(min, node.data);
         height = Math.max(height, depth);
@@ -66,9 +76,6 @@ public class MultisolverGenTree {
         for(Node child : node.children){
             multisolver(child, depth+1);
         }
-
-        System.out.println("Size : " + size + "\n" + "Min : " + min + "\n" + "Max : " + max + "\n" + "height :" + height);
-
       }
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -85,6 +92,7 @@ public class MultisolverGenTree {
         max = Integer.MIN_VALUE;
         height = 0;
         multisolver(root, 0);
+        System.out.println("Size : " + size + "\n" + "Min : " + min + "\n" + "Max : " + max + "\n" + "height :" + height);
     }
     
 }
