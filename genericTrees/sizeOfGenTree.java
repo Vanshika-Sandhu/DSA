@@ -3,13 +3,14 @@
 // 3. Input and Output is managed for you.
 
 // Sample Input
-// 12
+// 12 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
 // 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
 // Sample Output
 // 6
 
 package genericTrees;
 import java.util.*;
+import java.io.*;
 
 public class sizeOfGenTree {
 
@@ -67,22 +68,20 @@ public class sizeOfGenTree {
         return ts+1; // +1 for the parent node
     }
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-
-        int n = scn.nextInt();
-        int[] arr = new int[n];
-        String[] values = scn.nextLine().split(" ");
-        for (int i = 0; i < n; i++) {
+    public static void main(String[] args) throws Exception {
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+      int n = Integer.parseInt(br.readLine());
+      int[] arr = new int[n];
+      String[] values = br.readLine().split(" ");
+      for (int i = 0; i < n; i++) {
         arr[i] = Integer.parseInt(values[i]);
-        }
-
-        Node root = construct(arr);
-        int sz = size(root);
-        System.out.println(sz);
-        // display(root);
-
-        scn.close();
+      }
+  
+      Node root = construct(arr);
+      int sz = size(root);
+      System.out.println(sz);
+      // display(root);
+      br.close();
     }
     
 }
