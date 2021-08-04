@@ -132,7 +132,7 @@ public class sizeSumMaxHeightOfBinaryTree {
     
       public static int height(Node node) {
         if(node == null){
-            return -1;
+            return -1;  // -1 for edge type height and 0 for node type height
         }
         
         int lh = height(node.left);
