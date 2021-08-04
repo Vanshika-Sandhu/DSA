@@ -38,6 +38,33 @@ public class introBinaryTree {
         display(node.left);
         display(node.right);
     }
+
+    public static void traversalPre(Node node){
+        if(node==null){
+            return;
+        }
+        System.out.print(node.data + " ");
+        traversalPre(node.left);
+        traversalPre(node.right);
+    }
+
+    public static void traversalIn(Node node){
+        if(node==null){
+            return;
+        }
+        traversalIn(node.left);
+        System.out.print(node.data + " ");
+        traversalIn(node.right);
+    }
+
+    public static void traversalPost(Node node){
+        if(node==null){
+            return;
+        }
+        traversalPost(node.left);
+        traversalPost(node.right);
+        System.out.print(node.data + " ");
+    }
     public static void main(String[] args) throws Exception{
         Integer[] arr = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
 
@@ -80,6 +107,12 @@ public class introBinaryTree {
         }
 
         display(root);
+        System.out.print("Preorder : ");
+        traversalPre(root);
+        System.out.print("\nInorder : ");
+        traversalIn(root);
+        System.out.print("\nPostorder : ");
+        traversalPost(root);
 
     }
     
