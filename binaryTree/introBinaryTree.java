@@ -1,6 +1,5 @@
 package binaryTree;
 import java.util.*;
-import java.io.*;
 
 public class introBinaryTree {
     // node class used for binary tree
