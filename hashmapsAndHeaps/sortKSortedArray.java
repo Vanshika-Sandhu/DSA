@@ -54,7 +54,6 @@ public class sortKSortedArray {
             System.out.println(pq.remove());
             pq.add(arr[i]);
         }
-        
         while(pq.size()>0){
             System.out.println(pq.remove());
         }
