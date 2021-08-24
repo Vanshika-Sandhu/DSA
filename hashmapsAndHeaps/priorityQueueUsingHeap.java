@@ -51,6 +51,31 @@ public class priorityQueueUsingHeap {
       data = new ArrayList<>();
     }
 
+    // constructor 1
+    // time complexity = > nlogn
+    // public PriorityQueue(int[] arr) {
+      // data = new ArrayList<>();
+    //   for(int val : arr){
+    //     this.add(val);
+    //   }
+    // }
+
+    // constructor 2
+    // time complexit => n
+    public PriorityQueue(int[] arr) {
+      data = new ArrayList<>();
+      // step 1 => add elements only to arraylist
+      for(int val : arr){
+        data.add(val);
+      }
+
+      // step 2 => call downheapify on only 1st half of the elements of the arraylist 
+      for(int i= data.size()/2 - 1; i>=0; i-- ){
+        downheapify(i); 
+      }
+    }
+
+
     public void add(int val) {
       data.add(val);
       upheapify(data.size()-1);
